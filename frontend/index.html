@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENTRY: Fraud Detection Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="background-grid"></div>
+    <div class="crt-overlay"></div>
+
+    <header>
+        <h1>SENTRY <span>v2.0</span> // FRAUD DETECTION SYSTEM</h1>
+        <div class="status-indicator">
+            <div class="dot blinking"></div>
+            <span>SYSTEM ONLINE</span>
+        </div>
+    </header>
+
+    <main class="dashboard">
+        <!-- KPI Cards -->
+        <section class="kpi-panel glass-panel">
+            <div class="kpi-card">
+                <h3>Best Model</h3>
+                <p id="kpi-model" class="glow-cyan">Loading...</p>
+            </div>
+            <div class="kpi-card">
+                <h3>Accuracy</h3>
+                <p id="kpi-acc" class="glow-cyan">0.0%</p>
+            </div>
+            <div class="kpi-card">
+                <h3>AUC-ROC</h3>
+                <p id="kpi-auc" class="glow-magenta">0.0%</p>
+            </div>
+            <div class="kpi-card alert-stat">
+                <h3>Live Fraud Detected</h3>
+                <p id="kpi-live" class="glow-red">0</p>
+            </div>
+        </section>
+
+        <div class="middle-layout">
+            <!-- Charts Panel -->
+            <section class="charts-panel glass-panel">
+                <h2>// MODEL METRICS</h2>
+                <div class="chart-container">
+                    <canvas id="aucChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Manual Prediction Form -->
+            <section class="predict-panel glass-panel">
+                <h2>// MANUAL OVERRIDE</h2>
+                <form id="prediction-form">
+                    <div class="input-group">
+                        <label>Amount ($)</label>
+                        <input type="number" id="amount" required step="0.01" value="1500.00">
+                    </div>
+                    <div class="input-group">
+                        <label>Tx Hour (0-23)</label>
+                        <input type="number" id="hour" required min="0" max="23" value="3">
+                    </div>
+                    <div class="input-group">
+                        <label>Merchant</label>
+                        <select id="merchant">
+                            <option value="Groceries">Groceries</option>
+                            <option value="Dining">Dining</option>
+                            <option value="Retail">Retail</option>
+                            <option value="Online Subscription">Online Subscription</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Electronics">Electronics</option>
+                            <option selected value="Crypto">Crypto</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Location</label>
+                        <select id="location">
+                            <option value="Local">Local</option>
+                            <option value="Domestic">Domestic</option>
+                            <option value="International">International</option>
+                            <option selected value="DarkWeb">DarkWeb</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Account Age (Days)</label>
+                        <input type="number" id="age" required value="5">
+                    </div>
+                    <button type="submit" class="cyber-btn">ANALYZE TRANSACTION</button>
+                </form>
+
+                <div id="result-box" class="result-box hidden">
+                    <h3 id="result-status"></h3>
+                    <p>Risk Score: <span id="result-score"></span></p>
+                    <p class="explanation" id="result-explanation"></p>
+                </div>
+            </section>
+        </div>
+
+        <!-- Live Simulation -->
+        <section class="live-panel glass-panel">
+            <h2>// LIVE TRANSACTION STREAM</h2>
+            <div class="stream-container" id="stream-container">
+                <!-- Transactions will appear here -->
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

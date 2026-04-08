@@ -1,0 +1,90 @@
+{
+    "best_model": "Logistic Regression",
+    "metrics": {
+        "Logistic Regression": {
+            "Accuracy": 0.733,
+            "Precision": 0.1569,
+            "Recall": 0.6602,
+            "F1-Score": 0.2535,
+            "AUC-ROC": 0.8099,
+            "ConfusionMatrix": [
+                [
+                    2063,
+                    731
+                ],
+                [
+                    70,
+                    136
+                ]
+            ]
+        },
+        "Random Forest": {
+            "Accuracy": 0.875,
+            "Precision": 0.2351,
+            "Recall": 0.3641,
+            "F1-Score": 0.2857,
+            "AUC-ROC": 0.8036,
+            "ConfusionMatrix": [
+                [
+                    2550,
+                    244
+                ],
+                [
+                    131,
+                    75
+                ]
+            ]
+        },
+        "XGBoost": {
+            "Accuracy": 0.8793,
+            "Precision": 0.231,
+            "Recall": 0.3252,
+            "F1-Score": 0.2702,
+            "AUC-ROC": 0.804,
+            "ConfusionMatrix": [
+                [
+                    2571,
+                    223
+                ],
+                [
+                    139,
+                    67
+                ]
+            ]
+        },
+        "Naive Bayes": {
+            "Accuracy": 0.8247,
+            "Precision": 0.2183,
+            "Recall": 0.6019,
+            "F1-Score": 0.3204,
+            "AUC-ROC": 0.7981,
+            "ConfusionMatrix": [
+                [
+                    2350,
+                    444
+                ],
+                [
+                    82,
+                    124
+                ]
+            ]
+        },
+        "Decision Tree": {
+            "Accuracy": 0.8673,
+            "Precision": 0.1883,
+            "Recall": 0.2816,
+            "F1-Score": 0.2257,
+            "AUC-ROC": 0.596,
+            "ConfusionMatrix": [
+                [
+                    2544,
+                    250
+                ],
+                [
+                    148,
+                    58
+                ]
+            ]
+        }
+    }
+}
