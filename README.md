@@ -1,9 +1,10 @@
 # Credit Card Fraud Detection Project (SENTRY)
 
+
 A complete full-stack machine learning project demonstrating a realistic credit card fraud detection system.
 
-![SENTRY Dashboard](./frontend/dashboard_screenshot.jpg) <!-- Example screenshot path -->
-
+![Dashboard](dashboard.png)
+![Dashboard](dashboard2.png)
 ## Project Structure
 
 ```text
