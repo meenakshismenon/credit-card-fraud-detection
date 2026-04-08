@@ -4,7 +4,7 @@
 A complete full-stack machine learning project demonstrating a realistic credit card fraud detection system.
 
 ![Dashboard](dashboard.png.png)
-![Dashboard](dashboard2.png,png)
+![Dashboard](dashboard2.png.png)
 ## Project Structure
 
 ```text
